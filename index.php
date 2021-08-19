@@ -1,3 +1,15 @@
+<?php
+  if(isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    mail("idrisadeniji01@gmail.com", "Sent From Contact Form", $message, "From: $name <$email>");
+    mail($email, "Sent From Contact Form", "Your message was well received, thank you for contacting Idris Adeniji.", "From: $name <$email>");
+
+    echo "<script>alert('Thank you for contacting Idris Adeniji!')</script>";
+  }
+?>
 <!DOCTYPE html>
 <!-- upto 2 directory depth-->
 <html lang="en-US">
@@ -261,7 +273,7 @@
     </div>
     <div class="row">
       <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="bg-light my-2 p-3 pt-2"><form action="https://formspree.io/your@email.com"
+        <div class="bg-light my-2 p-3 pt-2"><form action="index.php" name = "contact"
     method="POST">
     <div class="form-group my-2">
       <label for="name" class="form-label fw-bolder">Name</label>
@@ -269,13 +281,13 @@
     </div>
     <div class="form-group my-2">
       <label for="email" class="form-label fw-bolder">Email</label>
-      <input class="form-control" type="email" id="email" name="_replyto" required>
+      <input class="form-control" type="email" id="email" name="email" required>
     </div>
   <div class="form-group my-2">
     <label for="message" class="form-label fw-bolder">Message</label>
     <textarea class="form-control" style="resize: none;" id="message" name="message" rows="4" required></textarea>
   </div>
-  <button class="btn btn-primary mt-2" type="submit">Send</button>
+  <button class="btn btn-primary mt-2" type="submit" name="submit">Send</button>
 </form>
         </div>
       </div>

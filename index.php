@@ -13,29 +13,6 @@ $smtp_pass = getenv('smtp_pass');
 
 $mail = new PHPMailer(true);
 
-// try {
-//     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-//     $mail->isSMTP();
-//     $mail->Host       = $smtp_host;
-//     $mail->SMTPAuth   = true;
-//     $mail->Username   = $sendmail_from;
-//     $mail->Password   = $smtp_pass;
-//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-//     $mail->Port       = $smtp_port;
-
-//     //Recipients
-//     $mail->setFrom($sendmail_from, 'Idris Adeniji');
-//     $mail->addAddress($email, $name);
-//     $mail->addAddress($email, $name);
-
-//     $mail->isHTML(false);
-//     $mail->Subject = 'Thanks for contacting Idris Adeniji';
-//     $mail->Body    = $message;
-
-//     $mail->send();
-// } catch (Exception $e) {
-//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-// }
   if(isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -181,7 +158,7 @@ $mail = new PHPMailer(true);
           </div>
         </div>
       </div>
-      <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100"><img class="avatar img-fluid mt-2" src="images/avatar.jpg" width="400" height="400" alt="Walter Patterson"/></div>
+      <div class="col-md-5 offset-md-1" data-aos="fade-left" data-aos-delay="100"><img class="avatar img-fluid mt-2" src="images/avatar.jpg" width="300" height="300 !important" alt="Idris Adeniji"/></div>
     </div>
   </div>
 </div>
@@ -218,13 +195,13 @@ $mail = new PHPMailer(true);
       <p class="mx-auto mb-4" style="max-width:600px"> I've undergone trainings from the following top notch technology brands.</p>
     </div>
     <div class="row py-3">
-      <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="images/services/hng.png" width="200" height="96" alt="web design"/>
+      <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100"><a href="https://hng.tech"><img class="mb-2" src="images/services/hng.png" width="200" height="96" alt="web design"/></a>
         <div class="h5">HNG Internship</div>
       </div>
-      <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="images/services/zuri-logo-full.svg" width="200" height="96" alt="graphic design"/>
+      <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200"><a href="https://zuri.team"><img class="mb-2" src="images/services/zuri-logo-full.svg" width="200" height="96" alt="graphic design"/></a>
         <div class="h5">Zuri Team</div>
       </div>
-      <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="300"><img class="mb-2" src="images/services/i4g.png" width="200" height="96" alt="ui-ux"/>
+      <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="300"><a href="https://ingressive.org"><img class="mb-2" src="images/services/i4g.png" width="200" height="96" alt="ui-ux"/></a>
         <div class="h5">Ingressive For Good</div>
       </div>
     </div>

@@ -1,24 +1,70 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
 $sendmail_from = getenv('sendmail_from');
+$smtp_host = getenv('smtp_host');
 $smtp_port = getenv('smtp_port');
 $smtp_user = getenv('smtp_user');
 $smtp_pass = getenv('smtp_pass');
-ini_set('sendmail_from', $sendmail_from);
-ini_set('SMTP', 'smtp.gmail.com');
-ini_set('smtp_port', $smtp_port);
-ini_set('smtp_user', $smtp_user);
-ini_set('smtp_pass', $smtp_pass);
-// ini_set('auth_username', '');
-// ini_set('auth_password', '');
+
+$mail = new PHPMailer(true);
+
+// try {
+//     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+//     $mail->isSMTP();
+//     $mail->Host       = $smtp_host;
+//     $mail->SMTPAuth   = true;
+//     $mail->Username   = $sendmail_from;
+//     $mail->Password   = $smtp_pass;
+//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+//     $mail->Port       = $smtp_port;
+
+//     //Recipients
+//     $mail->setFrom($sendmail_from, 'Idris Adeniji');
+//     $mail->addAddress($email, $name);
+//     $mail->addAddress($email, $name);
+
+//     $mail->isHTML(false);
+//     $mail->Subject = 'Thanks for contacting Idris Adeniji';
+//     $mail->Body    = $message;
+
+//     $mail->send();
+// } catch (Exception $e) {
+//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+// }
   if(isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
 
-    mail("idrisadeniji01@gmail.com", "Sent From Contact Form", $message, "From: $name <$email>");
-    mail($email, "Sent From Contact Form", "Your message was well received, thank you for contacting Idris Adeniji.", "From: $name <$email>");
+    try {
+      // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+      $mail->isSMTP();
+      $mail->Host       = $smtp_host;
+      $mail->SMTPAuth   = true;
+      $mail->Username   = $sendmail_from;
+      $mail->Password   = $smtp_pass;
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+      $mail->Port       = $smtp_port;
 
-    echo "<script>alert('Thank you for contacting Idris Adeniji!')</script>";
+      //Recipients
+      $mail->setFrom($sendmail_from, 'Idris Adeniji');
+      $mail->addAddress($email, $name);
+      $mail->addAddress($email, $name);
+
+      $mail->isHTML(false);
+      $mail->Subject = 'Thanks for contacting Idris Adeniji';
+      $mail->Body    = $message;
+      $mail->send();
+
+      echo "<script>alert('Thank you for contacting Idris Adeniji!')</script>";
+    } catch (Exception $e) {
+      echo "<script>alert('Message could not be sent. Mailer Error: {$mail->ErrorInfo}')</script>";
+    }
   }
 ?>
 <!DOCTYPE html>

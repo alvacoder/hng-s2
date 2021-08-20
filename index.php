@@ -124,7 +124,7 @@ $mail = new PHPMailer(true);
     <div class="row">
       <div class="col-md-6">
         <h2 class="h4 my-2">Hello! I’m Idris Adeniji.</h2>
-        <p>I am passionate about backend development, software design and architecture. I have several years of experience developing scalable and highly secured enterprise applications for various industry sectors using best practices.</p>
+        <p>I hold a Bachelor of Science degreein Computer Science from the University of Science and Applied Management. I am passionate about backend development, software design and architecture. I have several years of experience developing scalable and highly secured enterprise applications for various industry sectors using best practices.</p>
         <div class="row mt-3">
           <div class="col-sm-2">
             <div class="pb-1">Email:</div>

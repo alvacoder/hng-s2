@@ -80,7 +80,7 @@ $mail = new PHPMailer(true);
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-2">
               <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
               <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
               <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
               <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -162,26 +162,49 @@ $mail = new PHPMailer(true);
     </div>
   </div>
 </div>
-<div class="section px-3 px-lg-4 pt-5" id="services">
+<div class="section px-3 px-lg-4 pt-5" id="education">
   <div class="container-narrow">
     <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Services</h2>
+      <h2 class="marker marker-center">Education</h2>
     </div>
-    <div class="text-center">
-      <p class="mx-auto mb-3" style="max-width:600px"> I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.</p>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="card-header px-3 py-2">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">BSc. Computer Science</h3>
+                <div class="text-muted text-small">University of Science and Applied Management. <small>(2015-2018)</small></div>
+              </div><img src="images/services/full-stack.svg" width="48" height="48" alt="BSc. Computer science"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card mb-3" data-aos="fade-left" data-aos-delay="400">
+          <div class="card-header px-3 py-2">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">OND, Computer Engineering</h3>
+                <div class="text-muted text-small">The Polytechnic, Ibadan. <small>(2012-2014)</small></div>
+              </div><img src="images/services/full-stack.svg" width="48" height="48" alt="OND, Computer Engineering"/>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row py-3">
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="images/services/web-design.svg" width="96" height="96" alt="web design"/>
-        <div class="h5">Web Design</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="images/services/graphic-design.svg" width="96" height="96" alt="graphic design"/>
-        <div class="h5">Software Architecture</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300"><img class="mb-2" src="images/services/ui-ux.svg" width="96" height="96" alt="ui-ux"/>
-        <div class="h5">System Design</div>
-      </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="400"><img class="mb-2" src="images/services/app-development.svg" width="96" height="96" alt="app development"/>
-        <div class="h5">App Development</div>
+        <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="card-header px-3 py-2">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Certificate in Cyber Security.</h3>
+                <div class="text-muted text-small">DeVry University, Colorado. <small>(2015)</small></div>
+              </div><img src="images/services/full-stack.svg" width="48" height="48" alt="BSc. Computer science"/>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -189,7 +212,7 @@ $mail = new PHPMailer(true);
 <div class="section px-3 px-lg-4 pt-5" id="services">
   <div class="container-narrow">
     <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Trainings</h2>
+      <h2 class="marker marker-center">Trainings</h2>
     </div>
     <div class="text-center">
       <p class="mx-auto mb-4" style="max-width:600px"> I've undergone trainings powered by the following brands.</p>
@@ -210,7 +233,7 @@ $mail = new PHPMailer(true);
 <div class="section px-3 px-lg-4 pt-5" id="skills">
   <div class="container-narrow">
     <div class="text-center mb-5">
-      <h2 class="marker marker-center">My Skills</h2>
+      <h2 class="marker marker-center">Skills</h2>
     </div>
     <div class="text-center">
       <p class="mx-auto mb-3" style="max-width:600px">I am a quick learner and specialize in multitude of skills required for Web Application Development and Product Design</p>

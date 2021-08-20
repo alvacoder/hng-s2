@@ -1,4 +1,15 @@
 <?php
+$sendmail_from = getenv('sendmail_from');
+$smtp_port = getenv('smtp_port');
+$smtp_user = getenv('smtp_user');
+$smtp_pass = getenv('smtp_pass');
+ini_set('sendmail_from', $sendmail_from);
+ini_set('SMTP', 'smtp.gmail.com');
+ini_set('smtp_port', $smtp_port);
+ini_set('smtp_user', $smtp_user);
+ini_set('smtp_pass', $smtp_pass);
+// ini_set('auth_username', '');
+// ini_set('auth_password', '');
   if(isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];

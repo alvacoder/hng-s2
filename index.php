@@ -31,7 +31,7 @@ $mail = new PHPMailer(true);
       //Recipients
       $mail->setFrom($sendmail_from, 'Idris Adeniji');
       $mail->addAddress($email, $name);
-      $mail->addAddress($email, $name);
+      $mail->addAddress('idrisadeniji01@gmail.com', 'HNG Portfolio');
 
       $mail->isHTML(false);
       $mail->Subject = 'Thanks for contacting Idris Adeniji';

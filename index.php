@@ -192,7 +192,7 @@ $mail = new PHPMailer(true);
       <h2 class="marker marker-center">My Trainings</h2>
     </div>
     <div class="text-center">
-      <p class="mx-auto mb-4" style="max-width:600px"> I've undergone trainings from the following top notch technology brands.</p>
+      <p class="mx-auto mb-4" style="max-width:600px"> I've undergone trainings powered by the following brands.</p>
     </div>
     <div class="row py-3">
       <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100"><a href="https://hng.tech"><img class="mb-2" src="images/services/hng.png" width="200" height="96" alt="web design"/></a>
